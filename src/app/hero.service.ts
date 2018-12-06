@@ -10,7 +10,7 @@ import { MessageService } from './message.service';
 })
 export class HeroService {
 
-  constructor(public messageService: MessageService) { }
+  constructor(private messageService: MessageService) { }
 
   // synchronous
   // getHeroes(): Hero[] {
@@ -22,5 +22,4 @@ export class HeroService {
     this.messageService.add('HeroService: fetched heroes')
     return of(HEROES);
   }
-
 }
